@@ -1,5 +1,6 @@
 package controllers;
 
+import controllers.utils.MessageController;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -9,7 +10,6 @@ import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 import javafx.stage.Window;
-import services.UserService;
 
 import java.io.IOException;
 
@@ -39,11 +39,9 @@ public class LoginController
             }
             FXMLLoader loader = new FXMLLoader();
             loader.setLocation(getClass().getResource("/ui/utils/message.fxml"));
-            try
-            {
+            try {
                 loader.load();
-            } catch (IOException e)
-            {
+            } catch (IOException e) {
                 e.printStackTrace();
             }
 
@@ -62,8 +60,7 @@ public class LoginController
         textFieldLogin.getScene().getWindow().hide();
         FXMLLoader loader = new FXMLLoader();
         loader.setLocation(getClass().getResource("/ui/main.fxml"));
-        try
-        {
+        try {
             loader.load();
         } catch (IOException e)
         {
@@ -84,4 +81,5 @@ public class LoginController
     {
         textFieldLogin.getScene().getWindow().hide();
     }
+
 }
