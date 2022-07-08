@@ -12,7 +12,7 @@
                 AnchorPane.topAnchor="0.0">
         <HBox alignment="CENTER" prefHeight="200.0" prefWidth="817.0" AnchorPane.bottomAnchor="0.0"
               AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
-            <Label text="Авторизация">
+            <Label text="Тестирование">
                 <font>
                     <Font name="Book Antiqua" size="64.0"/>
                 </font>
@@ -25,7 +25,7 @@
               AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0"
               AnchorPane.topAnchor="0.0">
             <HBox alignment="CENTER" prefHeight="47.0" prefWidth="583.0">
-                <Label prefHeight="45.0" prefWidth="150.0" text="Логин">
+                <Label prefHeight="45.0" prefWidth="150.0" text="Имя:">
                     <font>
                         <Font name="Book Antiqua" size="36.0"/>
                     </font>
@@ -33,7 +33,7 @@
                         <Insets bottom="10.0" left="10.0" right="10.0" top="10.0"/>
                     </HBox.margin>
                 </Label>
-                <TextField fx:id="textFieldLogin">
+                <TextField fx:id="textFieldUsername">
                     <HBox.margin>
                         <Insets bottom="10.0" left="10.0" right="10.0" top="10.0"/>
                     </HBox.margin>
@@ -42,37 +42,10 @@
                     </font>
                 </TextField>
             </HBox>
-            <HBox alignment="CENTER" prefHeight="48.0" prefWidth="600.0">
-                <Label prefHeight="45.0" prefWidth="150.0" text="Пароль">
-                    <font>
-                        <Font name="Book Antiqua" size="36.0"/>
-                    </font>
-                    <HBox.margin>
-                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0"/>
-                    </HBox.margin>
-                </Label>
-                <PasswordField fx:id="textFieldPassword">
-                    <HBox.margin>
-                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0"/>
-                    </HBox.margin>
-                    <font>
-                        <Font name="Book Antiqua" size="36.0"/>
-                    </font>
-                </PasswordField>
-            </HBox>
             <HBox alignment="CENTER" prefHeight="64.0" prefWidth="264.0">
-                <Button maxWidth="-Infinity" mnemonicParsing="false" onAction="#onClickButtonOK" prefWidth="300.0"
-                        style="-fx-background-color: #006644;" text="ОК" textFill="WHITE">
-                    <font>
-                        <Font name="Book Antiqua" size="36.0"/>
-                    </font>
-                    <HBox.margin>
-                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0"/>
-                    </HBox.margin>
-                </Button>
-                <Button maxWidth="-Infinity" mnemonicParsing="false" onAction="#onClickButtonRegistration"
+                <Button maxWidth="-Infinity" mnemonicParsing="false" onAction="#onClickButtonStart"
                         prefWidth="300.0" style="-fx-background-color: #ffffff; -fx-border-style: solid;"
-                        text="Регистрация">
+                        text="Начать тест">
                     <font>
                         <Font name="Book Antiqua" size="36.0"/>
                     </font>

@@ -12,10 +12,8 @@ import java.util.Objects;
 /**
  * Начало программы
  */
-public class Main extends Application
-{
-    public static void main(String[] args)
-    {
+public class Main extends Application {
+    public static void main(String[] args) {
         launch(args);
     }
 
@@ -26,8 +24,7 @@ public class Main extends Application
      * @throws IOException исключение, если не возможно открыть окно
      */
     @Override
-    public void start(Stage stage) throws IOException
-    {
+    public void start(Stage stage) throws IOException {
         Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/ui/login.fxml")));
         stage.setScene(new Scene(root));
         stage.show();

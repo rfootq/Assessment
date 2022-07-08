@@ -6,32 +6,25 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 import javafx.stage.Window;
+import services.UserService;
 
 import java.io.IOException;
 
-public class LoginController
-{
+public class LoginController {
 
     private final int MIN_WIDTH = 700;
     private final int MIN_HEIGHT = 500;
 
     @FXML
-    private TextField textFieldLogin;
+    private TextField textFieldUsername;
 
     @FXML
-    private PasswordField textFieldPassword;
-
-    @FXML
-    void onClickButtonOK()
-    {
-        if (textFieldLogin.getText().trim().equals("") && textFieldPassword.getText().trim().equals(""))
-        {
-            if (Stage.getWindows().size() > 1)
-            {
+    void onClickButtonStart() {
+        if (textFieldUsername.getText().trim().equals("")) {
+            if (Stage.getWindows().size() > 1) {
                 ObservableList<Window> windows = Stage.getWindows();
                 windows.get(1).requestFocus();
                 windows.get(1).centerOnScreen();
@@ -46,7 +39,7 @@ public class LoginController
             }
 
             MessageController messageController = loader.getController();
-            messageController.setMessage("Заполните логин или пароль");
+            messageController.setMessage("Заполните имя");
 
             Parent root = loader.getRoot();
             Stage stage = new Stage();
@@ -57,13 +50,16 @@ public class LoginController
             return;
         }
 
-        textFieldLogin.getScene().getWindow().hide();
+        // Запись пользователя
+        UserService userService = new UserService(textFieldUsername.getText().trim());
+        userService.saveUser();
+
+        textFieldUsername.getScene().getWindow().hide();
         FXMLLoader loader = new FXMLLoader();
         loader.setLocation(getClass().getResource("/ui/main.fxml"));
         try {
             loader.load();
-        } catch (IOException e)
-        {
+        } catch (IOException e) {
             e.printStackTrace();
         }
 
@@ -75,11 +71,4 @@ public class LoginController
         stage.setMaximized(true);
         stage.show();
     }
-
-    @FXML
-    void onClickButtonRegistration()
-    {
-        textFieldLogin.getScene().getWindow().hide();
-    }
-
 }
