@@ -6,7 +6,7 @@
 <?import javafx.scene.text.*?>
 <AnchorPane xmlns:fx="http://javafx.com/fxml/1" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity"
             minWidth="-Infinity" xmlns="http://javafx.com/javafx/11"
-            fx:controller="controllers.LoginController">
+            fx:controller="controllers.EmployeesController">
     <AnchorPane layoutX="10.0" layoutY="10.0" prefHeight="199.0" prefWidth="817.0"
                 style="-fx-background-color: #FFFFFF;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0"
                 AnchorPane.topAnchor="0.0">
