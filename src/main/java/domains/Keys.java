@@ -6,6 +6,7 @@ package domains;
 
 import domains.tables.Answers;
 import domains.tables.Branches;
+import domains.tables.Employeeanswers;
 import domains.tables.Employees;
 import domains.tables.Organizations;
 import domains.tables.Positions;
@@ -15,6 +16,7 @@ import domains.tables.Testing;
 import domains.tables.Tests;
 import domains.tables.records.AnswersRecord;
 import domains.tables.records.BranchesRecord;
+import domains.tables.records.EmployeeanswersRecord;
 import domains.tables.records.EmployeesRecord;
 import domains.tables.records.OrganizationsRecord;
 import domains.tables.records.PositionsRecord;
@@ -23,6 +25,7 @@ import domains.tables.records.RolesRecord;
 import domains.tables.records.TestingRecord;
 import domains.tables.records.TestsRecord;
 
+import org.jooq.ForeignKey;
 import org.jooq.TableField;
 import org.jooq.UniqueKey;
 import org.jooq.impl.DSL;
@@ -49,4 +52,10 @@ public class Keys {
     public static final UniqueKey<RolesRecord> ROLES__ = Internal.createUniqueKey(Roles.ROLES, DSL.name(""), new TableField[] { Roles.ROLES.ROLE_ID }, true);
     public static final UniqueKey<TestingRecord> TESTING__ = Internal.createUniqueKey(Testing.TESTING, DSL.name(""), new TableField[] { Testing.TESTING.TESTING_ID }, true);
     public static final UniqueKey<TestsRecord> TESTS__ = Internal.createUniqueKey(Tests.TESTS, DSL.name(""), new TableField[] { Tests.TESTS.TEST_ID }, true);
+
+    // -------------------------------------------------------------------------
+    // FOREIGN KEY definitions
+    // -------------------------------------------------------------------------
+
+    public static final ForeignKey<EmployeeanswersRecord, QuestionsRecord> EMPLOYEEANSWERS__FK_EMPLOYEEANSWERS_QUESTIONS_PK = Internal.createForeignKey(Employeeanswers.EMPLOYEEANSWERS, DSL.name("fk_EmployeeAnswers_Questions_pk"), new TableField[] { Employeeanswers.EMPLOYEEANSWERS.QUESTION }, Keys.QUESTIONS__QUESTIONS_PK, new TableField[] { Questions.QUESTIONS.QUESTION_ID }, true);
 }

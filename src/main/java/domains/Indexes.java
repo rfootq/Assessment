@@ -5,6 +5,7 @@ package domains;
 
 
 import domains.tables.Branches;
+import domains.tables.Employeeanswers;
 import domains.tables.Employees;
 import domains.tables.Tests;
 
@@ -25,6 +26,7 @@ public class Indexes {
     // -------------------------------------------------------------------------
 
     public static final Index BRANCHES_ORGANIZATION_ID_UINDEX = Internal.createIndex(DSL.name("Branches_organization_id_uindex"), Branches.BRANCHES, new OrderField[] { Branches.BRANCHES.ORGANIZATION_ID }, true);
+    public static final Index EMPLOYEEANSWERS_TESTING_UINDEX = Internal.createIndex(DSL.name("EmployeeAnswers_testing_uindex"), Employeeanswers.EMPLOYEEANSWERS, new OrderField[] { Employeeanswers.EMPLOYEEANSWERS.TESTING }, true);
     public static final Index EMPLOYEES_BRANCH_UINDEX = Internal.createIndex(DSL.name("Employees_branch_uindex"), Employees.EMPLOYEES, new OrderField[] { Employees.EMPLOYEES.BRANCH }, true);
     public static final Index EMPLOYEES_POST_UINDEX = Internal.createIndex(DSL.name("Employees_post_uindex"), Employees.EMPLOYEES, new OrderField[] { Employees.EMPLOYEES.POST }, true);
     public static final Index EMPLOYEES_SERVICE_NUMBER_UINDEX = Internal.createIndex(DSL.name("Employees_service_number_uindex"), Employees.EMPLOYEES, new OrderField[] { Employees.EMPLOYEES.SERVICE_NUMBER }, true);

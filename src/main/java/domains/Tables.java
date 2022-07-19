@@ -6,6 +6,7 @@ package domains;
 
 import domains.tables.Answers;
 import domains.tables.Branches;
+import domains.tables.Employeeanswers;
 import domains.tables.Employees;
 import domains.tables.Organizations;
 import domains.tables.Positions;
@@ -31,6 +32,11 @@ public class Tables {
      * The table <code>Branches</code>.
      */
     public static final Branches BRANCHES = Branches.BRANCHES;
+
+    /**
+     * The table <code>EmployeeAnswers</code>.
+     */
+    public static final Employeeanswers EMPLOYEEANSWERS = Employeeanswers.EMPLOYEEANSWERS;
 
     /**
      * The table <code>Employees</code>.

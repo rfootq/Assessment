@@ -6,6 +6,7 @@ package domains;
 
 import domains.tables.Answers;
 import domains.tables.Branches;
+import domains.tables.Employeeanswers;
 import domains.tables.Employees;
 import domains.tables.Organizations;
 import domains.tables.Positions;
@@ -45,6 +46,11 @@ public class DefaultSchema extends SchemaImpl {
      * The table <code>Branches</code>.
      */
     public final Branches BRANCHES = Branches.BRANCHES;
+
+    /**
+     * The table <code>EmployeeAnswers</code>.
+     */
+    public final Employeeanswers EMPLOYEEANSWERS = Employeeanswers.EMPLOYEEANSWERS;
 
     /**
      * The table <code>Employees</code>.
@@ -104,6 +110,7 @@ public class DefaultSchema extends SchemaImpl {
         return Arrays.asList(
             Answers.ANSWERS,
             Branches.BRANCHES,
+            Employeeanswers.EMPLOYEEANSWERS,
             Employees.EMPLOYEES,
             Organizations.ORGANIZATIONS,
             Positions.POSITIONS,

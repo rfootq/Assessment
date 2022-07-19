@@ -35,8 +35,8 @@
                     <Font size="24.0"/>
                 </font>
             </TextArea>
-            <Button mnemonicParsing="false" onAction="#onClickNext" prefHeight="64.0" prefWidth="194.0"
-                    text="Далее">
+            <Button mnemonicParsing="false" onAction="#onClickBeginTesting" prefHeight="64.0" prefWidth="194.0"
+                    text="Начать тестирование">
                 <font>
                     <Font size="24.0"/>
                 </font>

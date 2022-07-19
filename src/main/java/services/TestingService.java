@@ -1,7 +1,11 @@
 package services;
 
-import static domains.Tables.EMPLOYEES;
-import static domains.Tables.TESTS;
+import domains.tables.Answers;
+import domains.tables.Employeeanswers;
+
+import java.util.List;
+
+import static domains.Tables.*;
 
 public class TestingService {
 
@@ -10,15 +14,15 @@ public class TestingService {
     public void startTesting() {
         //TESTS.TEST_ID.get(); чтение теста
         //TESTS.QUESTIONS.get(); чтение вопросов теста
+        //TESTS.ANSWERS.get(); чтение ответов теста
     }
 
     public void stopTesting() {
-        //EMPLOYEES.EMPLOYEE_ID.add(); добавление сотрудника, прошедшего тест
-        //расчет записанных ответов - с учетом правильных и неправильных ответов
+        //exit();
     }
 
-    public void nextQuestion() {
-        //ANSWERS.ANSWER.add(); добавление ответа пользователя
+    public void confirm(Employeeanswers employeeAnswers) {
+        // обработка ответа сотрудника
+        //EMPLOYEEANSWERS.EMPLOYEEANSWER.add(employeeAnswers); добавление ответа пользователя
     }
-
 }
