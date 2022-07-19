@@ -5,6 +5,8 @@ public class EmployeesService {
     public static final EmployeesService EMPLOYEES_SERVICE = new EmployeesService();
 
     public void selectEmployee() {
-        // запись в таблицу Testing
+        // поиск в Roles - админ или не админ
+        // если админ - запускаем AdminService
+        // иначе - EmployeeService
     }
 }
