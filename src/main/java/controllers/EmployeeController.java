@@ -1,16 +1,19 @@
 package controllers;
 
+import domains.tables.records.EmployeesRecord;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.scene.control.ComboBox;
+
+import java.util.List;
 
 import static services.EmployeesService.EMPLOYEES_SERVICE;
 
 public class EmployeeController {
 
     @FXML
-    private ComboBox<String> comboBoxEmployees;
+    private ComboBox<EmployeesRecord> comboBoxEmployees;
 
     @FXML
     void onClickButtonStart() {
@@ -21,10 +24,10 @@ public class EmployeeController {
     void initialize() {
         assert comboBoxEmployees != null : "fx:id=\"comboBoxEmployees\" was not injected: check your FXML file 'login.fxml'.";
 
-        ObservableList<String> langs = FXCollections.observableArrayList("Java", "JavaScript", "C#", "Python");
+        List<EmployeesRecord> employeesRecord = EMPLOYEES_SERVICE.getEmployeesFromDB();
 
-        comboBoxEmployees.setItems(langs);
+        ObservableList<EmployeesRecord> employees = FXCollections.observableArrayList(employeesRecord);
 
-        comboBoxEmployees.setValue("Java"); // устанавливаем выбранный элемент по умолчанию
+        comboBoxEmployees.setItems(employees);
     }
 }
