@@ -22,15 +22,15 @@ public class MainController {
             textAreaAnswer.setText("");
         }
 
-        TESTING_SERVICE.startTesting();
+        //TESTING_SERVICE.startTesting();
     }
 
     public void stop() {
-        TESTING_SERVICE.stopTesting();
+        //TESTING_SERVICE.stopTesting();
     }
 
     public void confirm() {
-        Employeeanswers employeeAnswers = new Employeeanswers();
-        TESTING_SERVICE.confirm(employeeAnswers);
+        //Employeeanswers employeeAnswers = new Employeeanswers();
+        //TESTING_SERVICE.confirm(employeeAnswers);
     }
 }
