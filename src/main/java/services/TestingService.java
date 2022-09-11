@@ -1,11 +1,7 @@
 package services;
 
-import domains.tables.Answers;
+import controllers.EmployeeController;
 import domains.tables.Employeeanswers;
-
-import java.util.List;
-
-import static domains.Tables.*;
 
 public class TestingService {
 
@@ -16,6 +12,9 @@ public class TestingService {
         //TESTS.TEST_ID.get(); чтение теста
         //TESTS.QUESTIONS.get(); чтение вопросов теста
         //TESTS.ANSWERS.get(); чтение ответов теста
+        // отображение экрана тестирования
+        EmployeeController employeeController = new EmployeeController();
+        employeeController.showWindow();
     }
 
     public void stopTesting() {

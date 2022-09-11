@@ -1,12 +1,8 @@
 package controllers;
 
-import domains.tables.Answers;
-import domains.tables.Employeeanswers;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextArea;
-
-import static services.TestingService.TESTING_SERVICE;
 
 public class MainController {
 

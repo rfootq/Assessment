@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<SplitPane dividerPositions="0.5" minWidth="500.0" orientation="VERTICAL" prefHeight="800.0" prefWidth="1100.0"
+           xmlns="http://javafx.com/javafx/11" xmlns:fx="http://javafx.com/fxml/1"
+           fx:controller="controllers.AdminController">
+    <AnchorPane prefHeight="200.0" prefWidth="200.0"/>
+    <AnchorPane prefHeight="200.0" prefWidth="200.0"/>
+</SplitPane>
